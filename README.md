@@ -15,8 +15,8 @@ Sounds simple, right? Here is where it gets interesting:
 - Once the sell by date has passed, `quality` degrades twice as fast
 - The `quality` of an item is never negative
 - "Aged Brie" actually _increases_ in `quality` the older it gets
-- The quality of an item is never more than 50
-- "Sulfuras", being a legendary item, never has to be sold or decreases in Quality
+- The `quality` of an item is never more than 50
+- "Sulfuras", being a legendary item, never has to be sold or decreases in `quality`
 - "Backstage passes", like aged brie, increase in `quality` as the `sell_in` value approaches:
   - `quality` increases by 2 when there are 10 days or less, and by 3 when there are 5 days or less
   - `quality` drops to 0 after the concert
@@ -26,10 +26,7 @@ We have recently signed a supplier of conjured items. This requires an update to
 - "Conjured" items degrade in `quality` twice as fast as normal items
 
 Feel free to make any changes to the `update_quality` method and add any new code, as long as everything
-still works correctly. However, do not alter the Item class or Items property as those belong to the
-goblin in the corner who will insta-rage and one-shot you as he doesn't believe in shared code
-ownership (you can make the UpdateQuality method and Items property static if you like, we'll cover
-for you).
+still works correctly.
 
-Just for clarification, an item can never have its Quality increase above 50, however "Sulfuras" is a
-legendary item and as such its Quality is 80 and it never alters.
+(Oh, and just for clarification, an item can never have a `quality` above 50, however "Sulfuras" is a
+legendary item and as such its `quality` is 80 and it never changes.)
