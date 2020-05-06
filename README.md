@@ -1,5 +1,26 @@
 # Gilded Rose
 
+## Welcome
+
+Welcome to our kata!
+Below you will find the details of the exercise.
+
+We suggest cloning it to your machine, work on your solution and then upload the full repo to your own profile on Github. Feel free to mark the project as private and then add us as collaborators once finished. **Please, don't open a PR to this repo!**
+
+Some points for you to consider:
+
+- We appreciate if you could git commit each relevant step of your development.
+- There's no hard deadline, we'd appreciate if you could submit your solution within 7 days. If you need more time just send us an email to inform us and it will be no problem.
+
+Please add a quick explanation in a separate README file where you clarify your general approach.
+Feel free to add your feedback to this coding challenge as well.
+
+If you have any question just write us an email and we will reply as soon as possible.
+
+Good luck!
+
+## Exercise
+
 Welcome to team Gilded Rose. We are a small inn with a prime location in a prominent city, run by a friendly innkeeper named Allison. We also buy and sell only the finest goods. Unfortunately, our goods are constantly degrading in quality as they approach their sell by date. We have a system in place that updates our inventory for us. It was developed by an engineer who has moved on to new adventures.
 
 Your task is to add a new feature to our system so that we can begin selling a new category of items.
