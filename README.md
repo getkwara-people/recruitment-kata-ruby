@@ -15,6 +15,12 @@ Some points for you to consider:
 Please add a quick explanation in a separate README file where you clarify your general approach.
 Feel free to add your feedback to this coding challenge as well.
 
+Once finished please:
+
+1. upload master to a private repo under your personal Github profile
+2. open a PR against it with your solution
+3. transfer the ownership of the repo to the account of the person you were in contact with (ask us in case you are unsure about this)
+
 If you have any question just write us an email and we will reply as soon as possible.
 
 Good luck!
