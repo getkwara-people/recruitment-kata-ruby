@@ -20,6 +20,18 @@ describe GildedRose do
 
         expect(item.quality).to eq(quality)
       end
+
+      it 'degrades new conjured items twice fast' do
+        sell_in = 1
+        quality = 20
+        item = Item.new('Conjured gloves', sell_in, quality)
+        service = GildedRose.new([item])
+        service.update_quality
+
+        expect(item.quality).to eq(quality - 2)
+        service.update_quality
+        expect(item.quality).to eq(quality - 6)
+      end
     end
   end
 end

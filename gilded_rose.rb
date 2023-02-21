@@ -10,13 +10,14 @@ class GildedRose
     @items.each do |item|
       next if LEGENDARY_ITEMS.include?(item.name)
 
-      item.sell_in-- unless LEGENDARY_ITEMS.include?(item.name)
+      item.sell_in = item.sell_in - 1
 
       if !QUALITY_UP_ITEMS.include?(item.name) && item.quality.positive?
-        degradation_rate = item.sell_in < 0 ? 2 : 1
-        degradation_rate = degradation_rate * 2 if item.conjured?
-        item.quality = item.quality - degradation_rate
+        degradation_rate = item.degradation_rate
+        if item.conjured?
+          degradation_rate = item.degradation_rate * 2
         end
+        item.quality = item.quality - degradation_rate
       else
         if item.quality < 50
           item.quality++
@@ -48,6 +49,14 @@ class Item
 
   def conjured?
     name.downcase.include?('conjured')
+  end
+
+  def degradation_rate
+    if sell_in < 0
+      2
+    else
+      1
+    end
   end
   
   def to_h
