@@ -21,6 +21,15 @@ describe GildedRose do
         expect(item.quality).to eq(quality)
       end
 
+      it 'degrades twice fast after sell_in date' do
+        sell_in = 0
+        quality = 80
+        item = Item.new('foo', sell_in, quality)
+        GildedRose.new([item]).update_quality
+
+        expect(item.quality).to eq(quality - 2)
+      end
+
       it 'degrades new conjured items twice fast' do
         sell_in = 1
         quality = 20
