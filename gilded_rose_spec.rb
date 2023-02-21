@@ -33,6 +33,15 @@ describe GildedRose do
         expect(item.quality).to eq(quality - 6)
       end
 
+      it 'upgrades Brie quality over time' do
+        sell_in = 10
+        quality = 20
+        item = Item.new('Aged Brie', sell_in, quality)
+        GildedRose.new([item]).update_quality
+
+        expect(item.quality).to eq(quality + 1)
+      end
+
       context 'backstage pass' do
         item_name = 'Backstage passes to a TAFKAL80ETC concert'
         
