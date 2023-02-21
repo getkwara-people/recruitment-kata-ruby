@@ -12,10 +12,9 @@ class GildedRose
 
       if !QUALITY_UP_ITEMS.include?(item.name) && item.quality.positive?
         if !LEGENDARY_ITEMS.include?(item.name)
-          if item.conjured?
-            item.quality = item.quality - 2
-          else
-            item.quality--
+          degradation_rate = item.sell_in < 0 ? 2 : 1
+          degradation_rate = degradation_rate * 2 if item.conjured?
+          item.quality = item.quality - degradation_rate
           end
         end
       else
@@ -26,31 +25,11 @@ class GildedRose
               item.quality = 0
             else
               if item.sell_in < 11 && item.quality < 50
-                item.quality++
-              end
-              if item.sell_in < 6 && item.quality < 49
+                item.quality = item.quality + 1
+              elsif item.sell_in < 6 && item.quality < 49
                 item.quality = item.quality + 2
               end
             end
-          end
-        end
-      end
-
-      
-      if item.sell_in < 0
-        if item.name != "Aged Brie"
-          if item.name != "Backstage passes to a TAFKAL80ETC concert"
-            if item.quality > 0
-              if item.name != "Sulfuras, Hand of Ragnaros"
-                item.quality--
-              end
-            end
-          else
-            item.quality--
-          end
-        else
-          if item.quality < 50
-            item.quality++
           end
         end
       end
