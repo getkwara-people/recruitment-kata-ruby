@@ -12,7 +12,11 @@ class GildedRose
 
       if !QUALITY_UP_ITEMS.include?(item.name) && item.quality.positive?
         if !LEGENDARY_ITEMS.include?(item.name)
-          item.quality--
+          if item.conjured?
+            item.quality = item.quality - 2
+          else
+            item.quality--
+          end
         end
       else
         if item.quality < 50
@@ -61,6 +65,10 @@ class Item
     @name = name
     @sell_in = sell_in
     @quality = quality
+  end
+
+  def conjured?
+    name.downcase.include?('conjured')
   end
   
   def to_h
