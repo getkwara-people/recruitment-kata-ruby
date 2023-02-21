@@ -12,8 +12,13 @@ describe GildedRose do
         expect(item.quality).to eq(quality - 1)
       end
 
-      it 'does something else' do
-        skip 'Your turn...'
+      it 'keeps sulfuras legendary' do
+        sell_in = 10
+        quality = 80
+        item = Item.new('Sulfuras, Hand of Ragnaros', sell_in, quality)
+        GildedRose.new([item]).update_quality
+
+        expect(item.quality).to eq(quality)
       end
     end
   end

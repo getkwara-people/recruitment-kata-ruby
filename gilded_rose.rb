@@ -3,19 +3,19 @@ class GildedRose
     @items = items
   end
 
-  QUALITY_UP_ITEMS = %w("Aged Brie" "Backstage passes to a TAFKAL80ETC concert").freeze
-  LEGENDARY_ITEMS = %w("Sulfuras, Hand of Ragnaros").freeze # Right now we only have 1 legendary item, but who knows what adventures await us!
+  QUALITY_UP_ITEMS = ["Aged Brie", "Backstage passes to a TAFKAL80ETC concert"].freeze
+  LEGENDARY_ITEMS = ["Sulfuras, Hand of Ragnaros"].freeze # Right now we only have 1 legendary item, but who knows what adventures await us!
 
   def update_quality()
     @items.each do |item|
+      next if LEGENDARY_ITEMS.include?(item.name)
+
       item.sell_in-- unless LEGENDARY_ITEMS.include?(item.name)
 
       if !QUALITY_UP_ITEMS.include?(item.name) && item.quality.positive?
-        if !LEGENDARY_ITEMS.include?(item.name)
-          degradation_rate = item.sell_in < 0 ? 2 : 1
-          degradation_rate = degradation_rate * 2 if item.conjured?
-          item.quality = item.quality - degradation_rate
-          end
+        degradation_rate = item.sell_in < 0 ? 2 : 1
+        degradation_rate = degradation_rate * 2 if item.conjured?
+        item.quality = item.quality - degradation_rate
         end
       else
         if item.quality < 50
