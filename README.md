@@ -5,23 +5,23 @@
 Welcome to our kata!
 Below you will find the details of the exercise.
 
-We suggest cloning it to your machine, work on your solution and then upload the full repo to your own profile on Github. Feel free to mark the project as private and then add us as collaborators once finished. **Please, don't open a PR to this repo!**
+Please clone it to your machine, work on your solution and then upload the full repo to your own profile on Github. **Please, don't open a PR to this repo!**
 
 Some points for you to consider:
 
 - We appreciate if you could git commit each relevant step of your development.
-- There's no hard deadline, we'd appreciate if you could submit your solution within 7 days. If you need more time just send us an email to inform us and it will be no problem.
+- There's no hard deadline, we'd appreciate if you could submit your solution within 4 days. If you need more time just send us an email to inform us and it will be no problem.
 
-Please add a quick explanation in a separate README file where you clarify your general approach.
-Feel free to add your feedback to this coding challenge as well.
+Please add a quick explanation in a separate README file where you clarify your general approach. Of particular interest is tradeoffs you may have made, and the reasoning for making them.
+Feel free to add your feedback to this coding challenge in the README as well.
 
 Once finished please:
 
-1. upload master to a private repo under your personal Github profile
+1. upload to a private repo under your personal Github profile
 2. open a PR against it with your solution
-3. transfer the ownership of the repo to the account of the person you were in contact with (ask us in case you are unsure about this)
+3. transfer the ownership of the repo to the account of the person you were in contact with (ask us in case you are unsure about this - should be provided in the email you received)
 
-If you have any question just write us an email and we will reply as soon as possible.
+If you have any additional questions just write us an email and we will reply as soon as possible.
 
 Good luck!
 
