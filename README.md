@@ -52,8 +52,7 @@ We have recently signed a supplier of conjured items. This requires an update to
 
 - "Conjured" items degrade in `quality` twice as fast as normal items
 
-Feel free to make any changes to the `update_quality` method and add any new code, as long as everything
-still works correctly.
+Feel free to make any changes to the `update_quality` method and/or add any new code you deem necessary, as long as the functionality for the innkeeper Allison still works as described above.
 
 (Oh, and just for clarification, an item can never have a `quality` above 50, however "Sulfuras" is a
 legendary item and as such its `quality` is 80 and it never changes.)
